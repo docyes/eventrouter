@@ -3,6 +3,9 @@ function EventRouter(options) {
     this.id = EventRouter.uniqueId();
     this.$el = (options.$el) ? options.$el : $('body');
     this.context = options.context || null;
+    if (options.routes) {
+        this.route(options.routes);
+    }
 }
 EventRouter.prototype = {
     splitter: /^(\S+)\s*(.*)$/;
