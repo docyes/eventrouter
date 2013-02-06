@@ -10,6 +10,6 @@ var eventRouter = new EventRouter({
 eventRouter.route({
     "click a": function() {},
     "click button": function() {},
-    "focus unput": function() {},
+    "focus input": function() {},
 });
 ```
