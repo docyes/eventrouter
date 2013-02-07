@@ -13,7 +13,7 @@ function EventRouter(options) {
     }
 }
 EventRouter.prototype = {
-    splitter: /^(\S+)\s*(.*)$/;
+    splitter: /^(\S+)\s*(.*)$/,
     route: function(routes) {
         if (typeof routes === 'function') {
             routes = routes();
