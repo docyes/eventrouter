@@ -50,9 +50,11 @@ EventRouter.uniqueId = function() {
     return ++EventRouter.idCounter;
 };
 EventRouter.bind = function(func, context) {
-    var nativeBind = Function.prototype.bind;
-    var slice = Array.prototype.slice;
-    if (func.bind === nativeBind && nativeBind) return nativeBind.apply(func, slice.call(arguments, 1));
+    var nativeBind = Function.prototype.bind,
+        slice = Array.prototype.slice;
+    if (func.bind === nativeBind && nativeBind) {
+        return nativeBind.apply(func, slice.call(arguments, 1));
+    }
     var args = slice.call(arguments, 2);
     return function() {
       return func.apply(context, args.concat(slice.call(arguments)));
