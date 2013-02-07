@@ -15,12 +15,15 @@ function EventRouter(options) {
 EventRouter.prototype = {
     splitter: /^(\S+)\s*(.*)$/;
     route: function(routes) {
-        if (!events) {
+        if (typeof routes === 'function') {
+            routes = routes();
+        }
+        if (!routes) {
             return;
         }
         this.unroute();
-        for (var key in events) {
-            var method = events[key];
+        for (var key in routes) {
+            var method = routes[key];
             if (typeof method !== 'function') {
                 continue;
             }
