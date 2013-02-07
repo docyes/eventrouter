@@ -41,7 +41,7 @@ EventRouter.prototype = {
             }
         }
     },
-    unroute: function(events) {
+    unroute: function() {
         this.$el.off('.EventRouter' + this.id);
     }
 };
