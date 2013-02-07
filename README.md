@@ -50,6 +50,7 @@ eventRouter.unroute();
 ```
 
 Route Replacement:
+```js
 var eventRouter = new EventRouter();
 eventRouter.route({
     "click a": function() {},
