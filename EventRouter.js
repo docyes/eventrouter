@@ -7,7 +7,7 @@ function EventRouter(options) {
         this.$el = $('body');
     }
     this.$el = (options.$el) ? options.$el : $('body');
-    this.context = options.context || null;
+    this.context = options.context;
     if (options.routes) {
         this.route(options.routes);
     }
