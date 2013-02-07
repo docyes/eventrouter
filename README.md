@@ -1,7 +1,7 @@
 Event Router
 ===========
 
-A minimalistic DOM event routing system inspired by the Backbone event delegate pattern.
+A minimalistic DOM event routing system inspired by the Backbone event delegate pattern. Dependencies: zepto.js or jQuery
 
 Basic Usage:
 ```js
