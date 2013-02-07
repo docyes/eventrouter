@@ -1,7 +1,7 @@
 Event Router
 ===========
 
-A minimalistic DOM event routing system inspired by the Backbone event delegates pattern.
+A minimalistic DOM event routing system inspired by the Backbone event delegate pattern.
 
 Basic Usage:
 ```js
@@ -18,6 +18,18 @@ Root DOM Element:
 ```js
 var eventRouter = new EventRouter({
     $el: $('header'),
+    routes {
+        'click a': function() {},
+        'click button': function() {},
+        'focus input': function() {},
+    }
+});
+```
+
+Root Selector Element:
+```js
+var eventRouter = new EventRouter({
+    $el: 'header',
     routes {
         'click a': function() {},
         'click button': function() {},

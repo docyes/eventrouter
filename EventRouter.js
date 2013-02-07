@@ -1,6 +1,11 @@
 function EventRouter(options) {
     options || (options = {});
     this.id = EventRouter.uniqueId();
+    if (options.$el) {
+         this.$el = (Object.prototype.toString.call(obj) == '[object String]') ? $(options.$el) : options.$el;
+    } else {
+        this.$el = $('body');
+    }
     this.$el = (options.$el) ? options.$el : $('body');
     this.context = options.context || null;
     if (options.routes) {
