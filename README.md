@@ -54,9 +54,9 @@ Route/Unroute:
 ```js
 var eventRouter = new EventRouter();
 eventRouter.route({
-    "click a": function() {},
-    "click button": function() {},
-    "focus input": function() {},
+    'click a': function() {},
+    'click button': function() {},
+    'focus input': function() {},
 });
 eventRouter.unroute();
 ```
@@ -65,10 +65,10 @@ Route Replacement:
 ```js
 var eventRouter = new EventRouter();
 eventRouter.route({
-    "click a": function() {},
+    'click a': function() {},
 });
 eventRouter.route({
-    "click button": function() {},
-    "focus input": function() {},
+    'click button': function() {},
+    'focus input': function() {},
 });
 ```
