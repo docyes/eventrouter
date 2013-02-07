@@ -80,7 +80,7 @@ eventRouter.route(function() {
         'click a': function() {},
         'click button': function() {},
         'focus input': function() {},
-    }
+    };
 });
 ```
 
