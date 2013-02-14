@@ -1,12 +1,8 @@
 function EventRouter(options) {
     options || (options = {});
     this.id = EventRouter.uniqueId();
-    if (options.$el) {
-         this.$el = (Object.prototype.toString.call(obj) == '[object String]') ? $(options.$el) : options.$el;
-    } else {
-        this.$el = $('body');
-    }
-    this.$el = (options.$el) ? options.$el : $('body');
+    this.$ = jQuery || Zepto;
+    this.$el = (options.el) ? this.$(options.el) : $('body');
     this.context = options.context;
     if (options.routes) {
         this.route(options.routes);
