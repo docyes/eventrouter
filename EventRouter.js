@@ -16,14 +16,17 @@
     }
     EventRouter.prototype = {
         splitter: /^(\S+)\s*(.*)$/,
-        route: function(routes) {
+        route: function(routes, options) {
+            options || (options = {});
             if (typeof routes === 'function') {
                 routes = routes();
             }
             if (!routes) {
                 return;
             }
-            this.unroute();
+            if (!options.append) {
+                this.unroute();
+            }
             for (var key in routes) {
                 var method = routes[key];
                 if (typeof method !== 'function') {
