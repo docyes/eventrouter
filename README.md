@@ -14,10 +14,10 @@ var eventRouter = new EventRouter({
 });
 ```
 
-Root DOM Element:
+Root jQuery/Zepto Element:
 ```js
 var eventRouter = new EventRouter({
-    $el: $('header'),
+    el: $('header'),
     routes {
         'click a': function() {},
         'click button': function() {},
@@ -26,10 +26,10 @@ var eventRouter = new EventRouter({
 });
 ```
 
-Root Selector Element:
+Root DOM Element:
 ```js
 var eventRouter = new EventRouter({
-    $el: 'header',
+    el: document.querySelectorAll('header')[0],
     routes {
         'click a': function() {},
         'click button': function() {},
