@@ -72,6 +72,19 @@ eventRouter.route({
     'focus input': function() {}
 });
 ```
+
+Route Append:
+```js
+var eventRouter = new EventRouter();
+eventRouter.route({
+    'click a': function() {},
+});
+eventRouter.route({
+    'click button': function() {},
+    'focus input': function() {}
+}, {append: true});
+```
+
 Routes as a Function:
 ```js
 var eventRouter = new EventRouter();
