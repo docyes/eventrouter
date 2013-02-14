@@ -6,10 +6,10 @@ A minimalistic DOM event routing system inspired by the Backbone event delegate 
 Basic Usage:
 ```js
 var eventRouter = new EventRouter({
-    routes {
+    routes: {
         'click a': function() {},
         'click button': function() {},
-        'focus input': function() {},
+        'focus input': function() {}
     }
 });
 ```
@@ -18,10 +18,10 @@ Root jQuery/Zepto Element:
 ```js
 var eventRouter = new EventRouter({
     el: $('header'),
-    routes {
+    routes: {
         'click a': function() {},
         'click button': function() {},
-        'focus input': function() {},
+        'focus input': function() {}
     }
 });
 ```
@@ -30,10 +30,10 @@ Root DOM Element:
 ```js
 var eventRouter = new EventRouter({
     el: document.querySelectorAll('header')[0],
-    routes {
+    routes: {
         'click a': function() {},
         'click button': function() {},
-        'focus input': function() {},
+        'focus input': function() {}
     }
 });
 ```
@@ -42,10 +42,10 @@ Context Scoped Callback:
 ```js
 var eventRouter = new EventRouter({
     context: this,
-    routes {
+    routes: {
         'click a': function() {},
         'click button': function() {},
-        'focus input': function() {},
+        'focus input': function() {}
     }
 });
 ```
@@ -56,7 +56,7 @@ var eventRouter = new EventRouter();
 eventRouter.route({
     'click a': function() {},
     'click button': function() {},
-    'focus input': function() {},
+    'focus input': function() {}
 });
 eventRouter.unroute();
 ```
@@ -69,7 +69,7 @@ eventRouter.route({
 });
 eventRouter.route({
     'click button': function() {},
-    'focus input': function() {},
+    'focus input': function() {}
 });
 ```
 Routes as a Function:
@@ -79,7 +79,7 @@ eventRouter.route(function() {
     return {
         'click a': function() {},
         'click button': function() {},
-        'focus input': function() {},
+        'focus input': function() {}
     };
 });
 ```
