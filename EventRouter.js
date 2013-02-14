@@ -7,7 +7,7 @@
 }(this, function($) {
     function EventRouter(options) {
         options || (options = {});
-        this.id = EventRouter.uniqueId();
+        this.eventNS = '.EventRouter' + EventRouter.uniqueId();
         this.$el = (options.el) ? $(options.el) : $('body');
         this.context = options.context;
         if (options.routes) {
@@ -35,7 +35,7 @@
                 if (this.context) {
                     method = EventRouter.bind(method, this.context);
                 }
-                eventName += '.EventRouter' + this.id;
+                eventName += this.eventNS;
                 if (selector === '') {
                     this.$el.on(eventName, method);
                 } else {
@@ -44,7 +44,7 @@
             }
         },
         unroute: function() {
-            this.$el.off('.EventRouter' + this.id);
+            this.$el.off(this.eventNS);
         }
     };
     EventRouter.idCounter = 0;
